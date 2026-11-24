@@ -1,0 +1,23 @@
+/* Hide Reddit's automatically triggered desktop login wall. */
+#desktop-dynamic-upsell-dialog {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Restore scrolling once content.js detects Reddit's scroll lock. */
+html[data-reddit-scroll-unlocker-active],
+html[data-reddit-scroll-unlocker-active] body {
+  overflow: auto !important;
+  overflow-x: visible !important;
+  overflow-y: auto !important;
+  max-height: none !important;
+  touch-action: auto !important;
+}
+
+html[data-reddit-scroll-unlocker-active] body {
+  position: static !important;
+  top: auto !important;
+  width: auto !important;
+  height: auto !important;
+}
